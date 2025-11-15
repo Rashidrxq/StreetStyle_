@@ -1,60 +1,143 @@
 # StreetStyle - T-Shirt E-commerce Website
 
-This is a complete e-commerce website for selling t-shirts built with Next.js 14, TypeScript, and Tailwind CSS.
+A modern, responsive e-commerce platform for selling premium t-shirts built with Next.js 14, TypeScript, and Tailwind CSS.
 
-## Features Implemented
+![Project Screenshot](public/screenshot.png)
 
-1. **Product Management**
-   - Product data structure with sample t-shirts
-   - Product listing with filtering by category
-   - Product detail pages with size and color selection
+## Features
 
-2. **Shopping Cart**
-   - Add/remove items from cart
-   - Update quantities
-   - Cart context management with React Context API
+### Current Implementation
+- **Product Management**: Browse, filter, and sort t-shirts by category
+- **Shopping Cart**: Add/remove items, adjust quantities, real-time updates
+- **Checkout Process**: Multi-step checkout with form validation
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Dynamic Routing**: Product detail pages with unique URLs
+- **State Management**: React Context API for cart functionality
 
-3. **Checkout Process**
-   - Shipping information form
-   - Payment information form
-   - Order confirmation page
+### Technologies Used
+- [Next.js 14](https://nextjs.org/) with App Router
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Context API](https://reactjs.org/docs/context.html)
 
-4. **UI Components**
-   - Responsive header with navigation and cart indicator
-   - Hero section for homepage
-   - Product cards with ratings and pricing
-   - Footer with site information
+## Getting Started
 
-## Pages
+### Prerequisites
+- Node.js 18.17 or later
+- npm, yarn, or pnpm
 
-- `/` - Homepage with featured products
-- `/products` - All products with filtering and sorting
-- `/product/[id]` - Product detail page
-- `/cart` - Shopping cart
-- `/checkout` - Checkout process
+### Installation
 
-## How to Run
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd streetstyle
+```
 
-Due to some environment issues, you may need to:
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
 
-1. Navigate to the project directory
-2. Run `npm install` to install dependencies
-3. Run `npm run dev` to start the development server
-4. Visit `http://localhost:3000` in your browser
+3. Run the development server:
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-## Technologies Used
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-- Next.js 14 (App Router)
-- TypeScript
-- Tailwind CSS
-- React Context API for state management
+### Building for Production
+```bash
+npm run build
+npm start
+```
 
-## Components
+## Project Structure
+```
+app/
+├── components/          # Reusable UI components
+├── context/             # React context providers
+├── data/                # Static data and types
+├── product/[id]/        # Dynamic product detail pages
+├── products/            # Product listing page
+├── cart/                # Shopping cart page
+├── checkout/            # Checkout flow
+├── layout.tsx           # Root layout
+└── page.tsx             # Homepage
+```
 
-- `Header` - Navigation and cart indicator
-- `Footer` - Site information and links
-- `Hero` - Homepage hero section
-- `ProductCard` - Product display component
-- `CartContext` - Shopping cart state management
+## Future Enhancements
 
-This project demonstrates a complete e-commerce workflow with product browsing, cart management, and checkout process.
+### AI Integration Roadmap
+See detailed [AI Integration Plan](AI_INTEGRATION_PLAN.md) for technical implementation details.
+
+Key areas for AI integration:
+- AI-powered product recommendations
+- AI chatbot for customer support
+- Visual search capabilities
+- AI-generated product descriptions
+
+### SEO Optimization Roadmap
+See detailed [SEO Implementation Guide](SEO_IMPLEMENTATION.md) for optimization strategies.
+
+Key SEO focus areas:
+- Technical SEO (structured data, sitemaps, canonical URLs)
+- Content SEO (keyword optimization, blog integration)
+- Performance optimization (Core Web Vitals)
+- Analytics and monitoring
+
+### Additional Features Roadmap
+See comprehensive [Future Updates Roadmap](FUTURE_UPDATES.md) for detailed plans.
+
+Additional features planned:
+- User accounts system
+- Advanced product features (reviews, size guides)
+- Enhanced checkout experience
+- Admin dashboard
+
+## Deployment
+
+### Vercel (Recommended)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone)
+
+### Other Platforms
+- **Netlify**: `netlify deploy`
+- **AWS**: Use Amplify or S3 + CloudFront
+- **Google Cloud**: App Engine or Firebase Hosting
+
+## Environment Variables
+Create a `.env.local` file in the root directory:
+```env
+# Next.js Environment
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+
+# Analytics (Optional)
+NEXT_PUBLIC_GA_ID=your-google-analytics-id
+
+# Payment Processing (Optional)
+STRIPE_PUBLIC_KEY=your-stripe-public-key
+STRIPE_SECRET_KEY=your-stripe-secret-key
+```
+
+## Contributing
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+Muhammed Rashid - [@your_twitter](https://twitter.com/your_twitter) - your.email@example.com
+
+Project Link: [https://github.com/yourusername/streetstyle](https://github.com/yourusername/streetstyle)
